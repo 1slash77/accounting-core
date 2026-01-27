@@ -31,6 +31,6 @@ plugins {
 rootProject.name = "accounting-core"
 
 include(":domain")
-//include(":ingestion-contracts")
-//include(":application-api")
+include(":ingestion-contracts")
+include(":application-api")
 

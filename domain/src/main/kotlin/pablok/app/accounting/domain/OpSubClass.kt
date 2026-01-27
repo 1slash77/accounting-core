@@ -1,0 +1,56 @@
+package pablok.app.accounting.domain
+
+/**
+ * More specific semantic class (bank-independent tokens).
+ * OpClass can be derived from OpSubClass if needed.
+ */
+enum class OpSubClass {
+    // CARD
+    CARD_OPERATION,
+    CARD_PURCHASE,
+    CARD_REFUND_OR_REVERSAL,
+    CARD_CHARGEBACK_REIMBURSEMENT,
+
+    // TRANSFER
+    TRANSFER_INTERNAL_OWN,
+    TRANSFER_BANK_WIRE,
+    TRANSFER_SBP_P2P_OUT,
+    TRANSFER_SBP_P2P_IN,
+    TRANSFER_SBP_MERCHANT_PAYMENT,
+    TRANSFER_SBP_REFUND,
+    TRANSFER_SALARY_IN,
+
+    // CASH
+    CASH_DEPOSIT_ATM,
+
+    // FEE
+    FEE_SBP_TRANSFER,
+    FEE_CARD_SERVICE,
+
+    // INCOME
+    INCOME_INTEREST_BALANCE,
+    INCOME_CASHBACK,
+    INCOME_BONUS_PERK,
+    INCOME_COMPENSATION,
+
+    // DEPOSIT
+    DEPOSIT_OPEN,
+    DEPOSIT_INTEREST_PAYOUT,
+    DEPOSIT_CLOSE,
+
+    // LOAN
+    LOAN_DISBURSEMENT,
+    LOAN_PRINCIPAL_REPAYMENT,
+    LOAN_INTEREST_REPAYMENT,
+    LOAN_INSURANCE,
+
+    // TAX / BILL
+    TAX_PAYMENT,
+    BILL_MOBILE,
+    BILL_INTERNET_TV,
+    BILL_UTILITIES,
+    BILL_OTHER,
+
+    NON_OPERATION,
+    UNKNOWN
+}

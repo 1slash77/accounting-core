@@ -20,8 +20,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/application-api" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/ingestion-contracts" />
           </set>
         </option>
       </GradleProjectSettings>
