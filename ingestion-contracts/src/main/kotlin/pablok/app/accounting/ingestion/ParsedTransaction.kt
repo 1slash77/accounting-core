@@ -25,7 +25,6 @@ data class ParsedTransaction(
     val currency: String,
     val direction: Direction,
 
-    val description: String,
     val counterpartyName: String? = null,
     val mcc: String? = null,
 
@@ -35,5 +34,15 @@ data class ParsedTransaction(
     val rawOperationId: String? = null,
 
     /** Bank-independent semantic hint tokens inferred by bank-specific logic. */
-    val opHints: Set<OpSubClass> = emptySet()
+    val opHints: Set<OpSubClass> = emptySet(),
+
+    // START TODO recently added fields, approve then
+    val unparsed: String,
+    // END
+
+    val description: String,
+
+    // START TODO recently added fields, approve then
+
+    // END
 )

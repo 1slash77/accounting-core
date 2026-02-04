@@ -14,7 +14,7 @@ data class PaymentEvent(
     /** Stable id in your domain (not necessarily the bank's id). */
     val id: String = UUID.randomUUID().toString(),
 
-    /** Operation time if known (may be null for date-only sources). */
+    /** Operation time if known (maybe null for date-only sources). */
     val occurredAt: Instant? = null,
 
     /** Posting/settlement time if known. */
