@@ -43,6 +43,9 @@ data class ParsedTransaction(
     val description: String,
 
     // START TODO recently added fields, approve then
+    val cardNumber: String? = null,
+    val paymentMethod: String? = null,
+    val place: String? = null,
 
     // END
 )
