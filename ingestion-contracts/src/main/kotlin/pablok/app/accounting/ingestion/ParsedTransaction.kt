@@ -47,6 +47,7 @@ data class ParsedTransaction(
         PAYMENT_METHOD("payment_method"),
         EXPECTED_UNBLOCK_DATE("expected_unblock_date"),
         RESERVED_AMOUNT("reserved_amount"),
-        CITY("city")
+        CITY("city"),
+        BANK_REF("bank_ref"),
     }
 }
