@@ -36,16 +36,17 @@ data class ParsedTransaction(
     /** Bank-independent semantic hint tokens inferred by bank-specific logic. */
     val opHints: Set<OpSubClass> = emptySet(),
 
-    // START TODO recently added fields, approve then
-    val unparsed: String,
-    // END
-
     val description: String,
 
-    // START TODO recently added fields, approve then
-    val cardNumber: String? = null,
-    val paymentMethod: String? = null,
-    val place: String? = null,
-
-    // END
-)
+    /** Optional JSON blob with extra structured details. */
+    val detailsJson: String? = null,
+) {
+    enum class DetailKey(key: String) {
+        UNPARSED("unparsed"),
+        CARD("card"),
+        PAYMENT_METHOD("payment_method"),
+        EXPECTED_UNBLOCK_DATE("expected_unblock_date"),
+        RESERVED_AMOUNT("reserved_amount"),
+        CITY("city")
+    }
+}
