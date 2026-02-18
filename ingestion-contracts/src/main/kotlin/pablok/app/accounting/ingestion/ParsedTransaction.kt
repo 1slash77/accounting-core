@@ -49,5 +49,9 @@ data class ParsedTransaction(
         RESERVED_AMOUNT("reserved_amount"),
         CITY("city"),
         BANK_REF("bank_ref"),
+        MERCHANT_REF("merchant_ref"),
+        MERCHANT_COUNTRY("merchant_country"),
+        MERCHANT_CITY("merchant_city"),
+        MERCHANT_LOCALITY("merchant_locality"),
     }
 }
