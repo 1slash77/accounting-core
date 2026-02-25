@@ -41,7 +41,7 @@ data class ParsedTransaction(
     /** Optional JSON blob with extra structured details. */
     val detailsJson: String? = null,
 ) {
-    enum class DetailKey(key: String) {
+    enum class DetailKey(val key: String) {
         UNPARSED("unparsed"),
         CARD("card"),
         PAYMENT_METHOD("payment_method"),
@@ -57,5 +57,9 @@ data class ParsedTransaction(
         MERCHANT_TAG("merchant_tag"),
         MERCHANT_SITE_ID("merchant_site_id"),
         MERCHANT_QUALIFIER("merchant_qualifier"),
+
+        USER_COMMENT("user_comment"),
+
+        COUNTERPARTY_BANK("counterparty_bank"),
     }
 }
