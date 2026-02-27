@@ -1,10 +1,11 @@
 package pablok.app.accounting.ingestion
 
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.LocalDateTime
 import pablok.app.accounting.domain.Direction
 import pablok.app.accounting.domain.OpSubClass
 import java.math.BigDecimal
-import java.time.Instant
-import java.time.LocalDate
+
 
 /**
  * Meaning-aware source claim produced by a parser for a single source artifact (PDF/UI).
@@ -13,9 +14,9 @@ import java.time.LocalDate
  */
 data class ParsedTransaction(
     val occurredDate: LocalDate? = null,
-    val occurredAt: Instant? = null,
+    val occurredAt: LocalDateTime? = null,
     val postedDate: LocalDate? = null,
-    val postedAt: Instant? = null,
+    val postedAt: LocalDateTime? = null,
 
     val status: TxStatus = TxStatus.UNKNOWN,
 
@@ -61,5 +62,7 @@ data class ParsedTransaction(
         USER_COMMENT("user_comment"),
 
         COUNTERPARTY_BANK("counterparty_bank"),
+        COUNTERPARTY_MOBILE_OPERATOR("counterparty_mobile_operator"),
+        COUNTERPARTY_USER_ACCOUNT("counterparty_user_account"),
     }
 }
