@@ -45,6 +45,7 @@ data class ParsedTransaction(
     enum class DetailKey(val key: String) {
         UNPARSED("unparsed"),
         CARD("card"),
+        ACCOUNT("account"),
         PAYMENT_METHOD("payment_method"),
         EXPECTED_UNBLOCK_DATE("expected_unblock_date"),
         RESERVED_AMOUNT("reserved_amount"),
@@ -66,5 +67,6 @@ data class ParsedTransaction(
         COUNTERPARTY_USER_ACCOUNT("counterparty_user_account"),
         COUNTERPARTY_COMMENT("counterparty_comment"),
         COUNTERPARTY_CONTRACT("counterparty_contract"),
+        COUNTERPARTY_REF("counterparty_ref"),
     }
 }
