@@ -65,5 +65,6 @@ data class ParsedTransaction(
         COUNTERPARTY_MOBILE_OPERATOR("counterparty_mobile_operator"),
         COUNTERPARTY_USER_ACCOUNT("counterparty_user_account"),
         COUNTERPARTY_COMMENT("counterparty_comment"),
+        COUNTERPARTY_CONTRACT("counterparty_contract"),
     }
 }
